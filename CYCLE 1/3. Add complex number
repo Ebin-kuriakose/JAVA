@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.Scanner;
+class complex
+{
+ Scanner co = new Scanner(System.in);
+ int real,img;
+ void read() throws IOException
+ {
+  System.out.print("\n\n Enter the real part: ");
+  real=co.nextInt();
+  System.out.print("\n Enter the imaginary part: ");
+  img=co.nextInt();
+ }
+ void display() throws IOException
+ { 
+  System.out.print("\n\n Complex number:"+real+"+"+img+"i");
+ }
+ void add(complex c1,complex c2)
+{ System.out.print("\nAFTER ADDITION");
+	real=c1.real+c2.real;
+ 	img =c1.img+c2.img;
+ }
+}
+class complexadd
+{
+public static void main(String args[])throws IOException
+ {
+  complex c1 = new complex();
+  c1.read(); 
+  c1.display();
+  complex c2 = new complex();
+  c2.read();
+  c2.display();
+  complex sum = new complex();
+  sum.add(c1,c2);
+  sum.display();
+}
+}
